@@ -1,0 +1,376 @@
+
+/* определение переменных */
+
+:root {
+	--font-description-item-color: #757575;
+	--font-heading-color: #212121;
+	--accent-color: #ffffff;
+	--background-footer-hero-color: #2f303a;
+	--background-basic-color: #e5e5e5;
+	--background-team-button-color: #f5f4fa;
+	--hover-web-color: #2196f3;
+	--font-family: 'Roboto';
+	--font-style: normal;
+	--address-color: #757575;
+	--fontsize-header-footer-advantage: 14px;
+	--fontsize-team-projectsdesc-buttons: 16px;
+}
+
+/* глобальные настройки и сброс по умолчанию*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+:visited {
+	color: inherit;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+}
+
+body {
+	font-family: var(--font-family), sans-serif;
+	font-style: var(--font-style);
+	letter-spacing: 0.03em;
+	font-weight: normal;
+	margin: 0px auto;
+	font-size: var(--fontsize-team-projectsdesc-buttons);
+}
+/* ======= класс, который прячет ====== */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* утилита задает размер главным блокам и размещает их по центру */
+
+.main-blocks-centred{
+	width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* утилита задает размер шрифту в header, footer, блоку advantages */
+
+.fontsize-header-footer-advantage {
+	font-size: var(--fontsize-header-footer-advantage);
+}
+/* обложка для portfolio, advantages, business */
+.background {
+	width: 1600px;
+	background-color: var(--background-basic-color);
+	padding: 94px 0px;
+}
+
+/* ======================== HEADER ======================== */
+
+ .header-container { 
+	
+	width: 1600px;
+	height: 80px;
+	background-color: var(--accent-color);
+	border-bottom: 1px solid #ECECEC;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0.02em;
+	color: var(--font-heading-color);
+    
+	
+	
+}
+
+header ul {
+	display: flex;
+}
+
+header li:not(:first-child) {
+    margin-left: 50px;
+}
+
+.contacts {
+	color: var(--font-description-item-color);
+}
+
+/* ============== ЛОГОТИП ==============*/
+.logo {
+	font-family: 'Raleway', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 1.2;
+	color: var(--font-heading-color);
+}
+
+.logo span {
+	color: var(--hover-web-color);
+}
+
+/* ======================== FOOTER ======================== */
+
+.footer-container {
+	width: 1600px;
+	
+	background-color: var(--background-footer-hero-color);
+}
+footer {
+	line-height: 1.71;
+	font-style: var(--font-style);
+	--font-heading-color: var(--accent-color);
+	padding: 60px 0px;
+}
+address {
+	font-style: inherit;
+	color: var(--font-heading-color);
+}
+
+.logo-footer {
+	display: block;
+	 
+	padding-bottom: 20px;
+}
+footer li:not(:last-child) {
+	margin-bottom: 9px;
+}
+
+.contacts-footer {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+/* ========== HOVER AND FOCUS ============= */
+
+.studio-ref:hover,
+.studio-ref:focus,
+.mail:hover,
+.mail:focus {
+	color: var(--hover-web-color);
+}
+
+.portfolio-ref {
+	color: var(--hover-web-color);
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+	background-color: var(--hover-web-color);
+	color: var(--accent-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== HERO ============= */
+
+.hero {
+	background-color: var(--background-footer-hero-color);
+	width: 1600px;
+	padding-top: 200px;
+	padding-bottom: 200px;
+	text-align: center;
+	
+}
+.hero-title {
+	
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+		
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--accent-color);
+	
+}
+
+.order-btn {
+
+	display: inline-block;
+	padding: 10px 32px;
+	min-width: 200px;
+	margin-top: 30px;
+
+	font-weight: bold;
+	line-height: 1.87;
+	letter-spacing: 0.06em;
+
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	color: var(--accent-color);
+	background-color: var(--hover-web-color);
+	
+}
+
+/* ============ НАШИ ПРЕИМУЩЕСТВА =============== */
+.advantages {
+	
+	display: flex;
+	justify-content: center;
+}
+
+.advantages li {
+	width: 270px;
+}
+.advantages li:not(:last-child){
+	margin-right: 30px;
+}
+
+
+.advantages h3 {
+	font-weight: bold;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--font-heading-color);
+	font-size: inherit;
+	margin-bottom: 10px;
+}
+.advantages p {
+	line-height: 1.7;
+	color: var(--font-description-item-color);
+}
+
+.section-title {
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+	color: var(--font-heading-color);
+	padding-bottom: 50px;
+	padding-top: 94px;
+}
+.business-list {
+	display: flex;
+	justify-content: center;
+	margin: 0px auto;
+	
+}
+.business-list li:not(:last-child){
+	margin-right: 30px;
+}
+
+/* ============ НАША КОМАНДА =============== */
+	
+.team {
+	background-color: var(--background-team-button-color);
+	line-height: 1.19;
+	text-align: center;
+	color: var(--font-description-item-color);
+	width: 1600px;
+}
+.team ul {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding-bottom: 94px;
+}
+.team li:not(:first-child) {
+	margin-left: 30px;
+	  
+}
+
+.team b {
+	display: block;
+	color: var(--font-heading-color);
+	
+}
+.team p {
+     margin-top: 10px;	
+	
+}
+.team-item {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
+	background: var(--accent-color);
+}
+/*============== СТРАНИЦА ПОРТФОЛИО ===================== */
+
+/* КНОПКИ ФИЛЬТРА */
+
+.filter {
+	
+	display: flex;
+	justify-content: center;
+	
+}
+.filter-btn {
+	
+	text-align: center;
+	min-width: 84px;
+	padding: 6px 22px;
+
+	font-weight: 500;
+	line-height: 1.62;
+	font-family: inherit;
+	font-style: inherit;
+	letter-spacing: inherit;
+	font-size: inherit;
+	
+	border-radius: 4px;
+	border: 0px;
+	color: var(--font-heading-color);
+	background-color: var(--background-team-button-color);
+}
+
+.filter li:not(:last-child) {
+	margin-right: 8px;
+}
+
+/* ============= ФОТО РАБОТ ============== */
+
+.photo-work {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 50px;
+	
+}
+.photo-work li:not(:nth-child(3n)){
+	margin-right: 27px;
+}
+.photo-work li{
+	border: 1px solid #EEEEEE; 
+	background: var(--accent-color);
+	margin-bottom: 30px;
+}
+.photo-work li:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+}
+.photo-work b, .photo-work p {
+	margin-left: 24px;
+}
+.photo-work b {
+	display:block;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 4px;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+	color: var(--font-heading-color);
+	
+}
+.photo-work p {
+	line-height: 1.87;
+	color: var(--font-description-item-color);
+	margin-bottom: 20px;
+}
