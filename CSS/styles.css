@@ -77,6 +77,16 @@ body {
 	background-color: var(--background-basic-color);
 	padding: 94px 0px;
 }
+/* настройки для заголовков секций */
+.section-title {
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+	color: var(--font-heading-color);
+	padding-bottom: 50px;
+	padding-top: 94px;
+}
 
 /* ======================== HEADER ======================== */
 
@@ -110,9 +120,17 @@ header ul {
 header li:not(:first-child) {
     margin-left: 50px;
 }
+.contacts-header li{
+	display: flex;
+	align-items: center;
+	
+}
+
 
 .contacts {
 	color: var(--font-description-item-color);
+	display:flex;
+	align-items: center;
 }
 
 /* ============== ЛОГОТИП ==============*/
@@ -129,6 +147,33 @@ header li:not(:first-child) {
 	color: var(--hover-web-color);
 }
 
+.icon-mail {
+	width: 12px;
+	height: 10px;
+	margin-right: 10px;
+}
+.icon-phone {
+	width: 10px;
+	height: 16px;
+	margin-right: 10px;
+}
+/*  
+.mail::before {
+	
+	
+	content: "";
+	height: 30px;
+	width: 20px;
+	margin-right: 10px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	outline: 1px solid black;
+	background-position: center; 
+
+	
+	background-image: url("../img/phone.svg");
+} 
+*/
 /* ======================== FOOTER ======================== */
 
 .footer-container {
@@ -183,11 +228,20 @@ footer li:not(:last-child) {
 /* ========== HERO ============= */
 
 .hero {
-	background-color: var(--background-footer-hero-color);
+	/* background-color: var(--background-footer-hero-color); */
 	width: 1600px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-top: 200px;
 	padding-bottom: 200px;
 	text-align: center;
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),
+	rgba(47, 48, 58, 0.4)
+	   ),
+	   url("../img/overlay.jpg");
+	   
+
 	
 }
 .hero-title {
@@ -247,16 +301,16 @@ footer li:not(:last-child) {
 	line-height: 1.7;
 	color: var(--font-description-item-color);
 }
-
-.section-title {
-	font-weight: bold;
-	font-size: 36px;
-	line-height: 1.16;
-	text-align: center;
-	color: var(--font-heading-color);
-	padding-bottom: 50px;
-	padding-top: 94px;
+.icon-advantages {
+	width: inherit;
+	height: 120px;
+	padding: 25px 0px;
+	margin-bottom: 30px;
+	background: #F5F4FA;
+    border-radius: 4px;
 }
+
+
 .business-list {
 	display: flex;
 	justify-content: center;
@@ -280,11 +334,13 @@ footer li:not(:last-child) {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	padding-bottom: 94px;
+	
 }
-.team li:not(:first-child) {
+.team-list>li:not(:first-child) {
 	margin-left: 30px;
-	  
+}
+.team, .customers {
+	padding-bottom: 94px;
 }
 
 .team b {
@@ -303,6 +359,48 @@ footer li:not(:last-child) {
 	border-radius: 0px 0px 4px 4px;
 	background: var(--accent-color);
 }
+.icon-social-team {
+	height: 44px;
+	width: 44px;
+	padding: 12px 0px;
+	/* background-color: black; */
+}
+.social-links {
+	padding-top: 16px;
+}
+.social-links>li:not(:first-child) {
+	margin-left: 10px;
+}
+
+/* =============== CUSTOMERS ================== */
+.customers {
+	width: 1600px;
+	background-color: var(--background-basic-color);
+}
+
+.customers-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 170px;
+	height: 90px;
+	border: 1px solid #AFB1B8;
+	border-radius: 4px;
+}
+.customers-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.customers-list>li:not(:first-child) {
+	margin-left: 30px;
+}
+/*  
+.icon-customers {
+	width: 40px;
+	height: 52px;
+}
+*/
 /*============== СТРАНИЦА ПОРТФОЛИО ===================== */
 
 /* КНОПКИ ФИЛЬТРА */
