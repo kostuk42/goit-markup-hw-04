@@ -26,10 +26,10 @@
                     <a class="studio-ref" href="./index.html">Студия</a>
                 </li>
                 <li>
-                    <a href="./portfolio.html">Портфолио</a>
+                    <a class="portfolio-ref" href="./portfolio.html">Портфолио</a>
                 </li>
                 <li>
-                    <a href="">Контакты</a>
+                    <a class="contacts-ref" href="">Контакты</a>
                 </li>
             </ul>
             <!-- контакты -->
@@ -79,7 +79,7 @@
                         <use href="./img/sprite.svg#icon-plate">
                         </use>
                     </svg>
-                    <h3>Внимание к деталям</h3>
+                    <h3 class="font-caps">Внимание к деталям</h3>
                     <p>Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                 </li>
                 <li>
@@ -87,7 +87,7 @@
                         <use href="./img/sprite.svg#icon-clocks">
                         </use>
                     </svg>
-                    <h3>Пунктуальность</h3>
+                    <h3 class="font-caps">Пунктуальность</h3>
                     <p>Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                 </li>
                 <li>
@@ -95,7 +95,7 @@
                         <use href="./img/sprite.svg#icon-diagram1">
                         </use>
                     </svg>
-                    <h3>Планирование</h3>
+                    <h3 class="font-caps">Планирование</h3>
                     <p>Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                         <use href="./img/sprite.svg#icon-spaceman">
                         </use>
                     </svg>
-                    <h3>Современные технологии</h3>
+                    <h3 class="font-caps">Современные технологии</h3>
                     <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                 </li>
             </ul>
@@ -252,7 +252,7 @@
                      <b>Михаил Ермаков</b>
                      <p>UI Designer</p>
                     <ul class="social-links">
-                        <li>
+                        <li class="social-link-team"> 
                             <a href="#">
                                 <svg class="icon-social-team">
                                     <use href="./img/sprite.svg#icon-instagram-1">
@@ -260,7 +260,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="twitter">
+                        <li class="social-link-team">
                             <a href="#">
                                 <svg class="icon-social-team">
                                     <use href="./img/sprite.svg#icon-twitter-1">
@@ -268,7 +268,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="facebook">
+                        <li class="social-link-team">
                             <a href="#">
                                 <svg class="icon-social-team">
                                     <use href="./img/sprite.svg#icon-facebook-1">
@@ -276,7 +276,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="linkedin">
+                        <li class="social-link-team">
                             <a href="#">
                                 <svg class="icon-social-team">
                                     <use href="./img/sprite.svg#icon-linkedin-1">
@@ -294,7 +294,7 @@
 <ul class="customers-list main-blocks-centred">
     <li class="customers-item">
         <a href="#">
-        <svg width="44" height="49">
+        <svg class="customers-icon" width="44" height="49">
              <use href="./img/sprite.svg#icon-logo-1">
              </use>
         </svg>
@@ -302,7 +302,7 @@
     </li>
     <li class="customers-item">
         <a href="#">
-        <svg width="40" height="52">
+        <svg class="customers-icon" width="40" height="52">
              <use href="./img/sprite.svg#icon-logo-2">
              </use>
         </svg>
@@ -310,7 +310,7 @@
     </li>
     <li class="customers-item">
         <a href="#">
-        <svg width="41" height="42">
+        <svg class="customers-icon" width="41" height="42">
              <use href="./img/sprite.svg#icon-logo-3">
              </use>
         </svg>
@@ -318,7 +318,7 @@
     </li>
     <li class="customers-item">
         <a href="#">
-        <svg width="80" height="42">
+        <svg class="customers-icon" width="80" height="42">
             <use href="./img/sprite.svg#icon-logo-4">
             </use>
         </svg>
@@ -326,7 +326,7 @@
     </li>
     <li class="customers-item">
         <a href="#">
-        <svg width="59" height="47">
+        <svg class="customers-icon" width="59" height="47">
             <use href="./img/sprite.svg#icon-logo-5">
             </use>
         </svg>
@@ -334,7 +334,7 @@
     </li>
     <li class="customers-item">
         <a href="#">
-        <svg width="89" height="45">
+        <svg class="customers-icon" width="89" height="45">
             <use href="./img/sprite.svg#icon-logo-6">
             </use>
         </svg>
@@ -345,7 +345,11 @@
     </main>
 <div class="footer-container">
     <footer class="fontsize-header-footer-advantage main-blocks-centred">
-        <a class="logo logo-footer" href=""><span>Web</span>Studio</a>
+        <div class="logo-social-title">
+            <a class="logo logo-footer" href=""><span>Web</span>Studio</a>
+            <h3 class="font-caps social-heading">присоединяйтесь</h3>
+        </div>
+<div class="address-social">
         <address>
             <ul>
                 <li>г. Киев, пр-т Леси Украинки, 26</li>
@@ -353,6 +357,44 @@
                 <li><a class="contacts-footer" href="tel:+380961111111">+38 096 111 11 11</a></li>
             </ul>
         </address>
+        
+    
+        
+        <ul class="social-links">
+            <li>
+                <a href="#">
+                    <svg class="icon-social-team round">
+                        <use href="./img/sprite.svg#icon-instagram-1">
+                        </use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg class="icon-social-team round">
+                        <use href="./img/sprite.svg#icon-twitter-1">
+                        </use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg class="icon-social-team round">
+                        <use href="./img/sprite.svg#icon-facebook-1">
+                        </use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg class="icon-social-team round">
+                        <use href="./img/sprite.svg#icon-linkedin-1">
+                        </use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+     </div> 
     </footer>
 </div>
 </body>
