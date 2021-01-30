@@ -522,3 +522,7 @@ address {
 	color: var(--font-description-item-color);
 	margin-bottom: 20px;
 }
+.photo-work a {
+	width: inherit;
+	height: inherit;
+}
