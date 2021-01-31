@@ -35,7 +35,7 @@ li {
 }
 a {
 	text-decoration: none;
-	color: inherit;
+	display: block;
 }
 img {
 	display: block;
@@ -46,8 +46,9 @@ body {
 	font-style: var(--font-style);
 	letter-spacing: 0.03em;
 	font-weight: normal;
-	margin: 0px auto;
+	/* margin: 0px auto; */
 	font-size: var(--fontsize-team-projectsdesc-buttons);
+	background-color: var(--background-basic-color);
 }
 /* ======= класс, который прячет ====== */
 .visually-hidden {
@@ -64,7 +65,9 @@ body {
 /* утилита задает размер главным блокам и размещает их по центру */
 
 .main-blocks-centred{
-	width: 1170px;
+	width:1200px; 
+	padding-left: 15px;
+	padding-right: 15px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -73,12 +76,7 @@ body {
 .fontsize-header-footer-advantage {
 	font-size: var(--fontsize-header-footer-advantage);
 }
-/* обложка для portfolio, advantages, business */
-.background {
-	width: 1600px;
-	background-color: var(--background-basic-color);
-	padding: 94px 0px;
-}
+
 /* настройки для заголовков секций */
 .section-title {
 	font-weight: bold;
@@ -86,25 +84,20 @@ body {
 	line-height: 1.16;
 	text-align: center;
 	color: var(--font-heading-color);
-	padding-bottom: 50px;
-	padding-top: 94px;
+	
 }
 /* шрифт для фрагментов в верхнем регистре */
 .font-caps {
 	font-weight: bold;
 	line-height: 1.14;
 	text-transform: uppercase;
-	
 	font-size: inherit;
-	
 }
 
 /* ======================== HEADER ======================== */
 
  .header-container { 
 	
-	width: 1600px;
-	height: 80px;
 	background-color: var(--accent-color);
 	border-bottom: 1px solid #ECECEC;
 }
@@ -113,15 +106,12 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
-
+	padding: 25px 0;
 	font-weight: 500;
 	line-height: 1;
 	letter-spacing: 0.02em;
 	color: var(--font-heading-color);
-    
-	
-	
+
 }
 
 header ul {
@@ -136,7 +126,6 @@ header li:not(:first-child) {
 	align-items: center;
 	
 }
-
 
 .contacts {
 	color: var(--font-description-item-color);
@@ -174,29 +163,28 @@ header li:not(:first-child) {
 /* ======================== FOOTER ======================== */
 
 .footer-container {
-	width: 1600px;
 	
 	background-color: var(--background-footer-hero-color);
-}
-footer {
-	
-	line-height: 1.71;
-	font-style: var(--font-style);
-	--font-heading-color: var(--accent-color);
 	padding: 60px 0px;
 }
+footer {	
+	line-height: 1.71;
+	font-style: var(--font-style);
+	--font-heading-color: var(--accent-color);	
+}
+
 .logo-social-title {
 	display: flex;
 	align-items: baseline;
 }
+
 address {
 	font-style: inherit;
 	color: var(--font-heading-color);
 }
 
 .logo-footer {
-	display: block;
-	 
+	display: block; 
 	padding-bottom: 20px;
 }
 footer li:not(:last-child) {
@@ -211,7 +199,6 @@ footer li:not(:last-child) {
 	display: flex;
 }
 
-
 .contacts-footer {
 	color: rgba(255, 255, 255, 0.6);
 }
@@ -225,48 +212,42 @@ footer li:not(:last-child) {
 address {
 	margin-right: 70px;
 }
-.round {
-	/* border-radius: 50%; */
-	background: rgba(255, 255, 255, 0.1);
-	
-}
 
 /* ========== HOVER AND FOCUS ============= */
 
-.studio-ref:hover,
-.studio-ref:focus,
-.contacts-ref:hover,
-.contacts-ref:focus,
-.portfolio-ref:hover,
-.portfolio-ref:focus
- {
+header a:hover,
+header a:focus {
 	color: var(--hover-web-color);
 }
-.icon-social-team:hover, 
-.icon-social-team:focus {
+/* соц сети в команде */
+.team-item a:hover,  
+.team-item a:focus {
 	background-color: var(--hover-web-color);
-	fill: var(--accent-color);
+	color: var(--accent-color);
  }
-
+/* кнопки фильтра в портфолио */
 .filter-btn:hover,
 .filter-btn:focus {
 	background-color: var(--hover-web-color);
 	color: var(--accent-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.photo-work li:hover,
-.photo-work li:focus {
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+/* фото работ в портфолио */
+.photo-work a:hover,
+.photo-work a:focus {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); 
 }
-
-.round:hover,
-.round:focus {
+/* соц сети в футере */
+.social-link-footer:hover,
+.social-link-footer:focus {
 	background: #2196F3;
-	fill: var(--accent-color);
+	color: var(--accent-color);
 }
-.customers-icon:hover,
-.customers-icon:focus {
-	fill: var(--hover-web-color);
+/* лого клиентов */
+.customers-item a:hover,
+.customers-item a:focus {
+	color: var(--hover-web-color);
+	
 }
 .contacts:hover,
 .contacts:focus {
@@ -274,13 +255,43 @@ address {
 	fill: var(--hover-web-color);
 }
 
+/* =========== social links icons ======= */
+
+.icon-social {
+	height: 44px;
+	width: 44px;
+	padding: 12px 0px;
+	fill: currentColor;
+	border-radius: 50%;
+	
+}
+
+.social-links>li:not(:first-child) {
+	margin-left: 10px;
+}
+/* social links in footer */
+.social-links a {
+	width: 44px; 
+	height: 44px; 
+	border-radius: 50%;
+	color:var(--accent-color);
+	background: rgba(255, 255, 255, 0.1);
+}
+/* social links in team */
+.team-item a {
+	color: #AFB1B8;
+}
+
+
+
+
  
 /* ========== HERO ============= */
 
 .hero {
 	/* background-color: var(--background-footer-hero-color); */
-	width: 1600px;
-	height: 600px;
+	max-width: 1600px;
+	min-height: 600px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 200px;
@@ -326,25 +337,31 @@ address {
 
 /* ============ НАШИ ПРЕИМУЩЕСТВА =============== */
 .advantages {
+	padding-bottom: 94px;
+	padding-top: 94px;
+	background-color: var(--background-basic-color);
+}
+.advantages-list {
 	
 	display: flex;
 	justify-content: center;
+
 }
 
-.advantages li {
+.advantages-list li {
 	width: 270px;
 }
-.advantages li:not(:last-child){
+.advantages-list li:not(:last-child){
 	margin-right: 30px;
 }
 
 
-.advantages h3{
+.advantages-list h3{
 	
 	color: var(--font-heading-color);
 	margin-bottom: 10px;
 }
-.advantages p {
+.advantages-list p {
 	line-height: 1.7;
 	color: var(--font-description-item-color);
 }
@@ -357,7 +374,14 @@ address {
 	border-radius: 4px;
 	fill: #212121;
 }
+/* ============= ЧЕМ МЫ ЗАНИМАЕМСЯ ============ */
 
+
+.business {
+	margin-top: 50px;
+	padding-bottom: 94px;
+	
+}
 
 .business-list {
 	display: flex;
@@ -376,20 +400,21 @@ address {
 	line-height: 1.19;
 	text-align: center;
 	color: var(--font-description-item-color);
-	width: 1600px;
+	padding-bottom: 94px;
+	padding-top: 94px;
+	
 }
 .team ul {
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	margin-top: 50px;
 	
 }
 .team-list>li:not(:first-child) {
 	margin-left: 30px;
 }
-.team, .customers {
-	padding-bottom: 94px;
-}
+
 
 .team b {
 	display: block;
@@ -408,55 +433,45 @@ address {
 	border-radius: 0px 0px 4px 4px;
 	background: var(--accent-color);
 }
-.icon-social-team {
-	height: 44px;
-	width: 44px;
-	padding: 12px 0px;
-	fill: #AFB1B8;
-	border-radius: 50%;
-	
-}
 
-.social-links>li:not(:first-child) {
-	margin-left: 10px;
-}
 
 /* =============== CUSTOMERS ================== */
 .customers {
-	width: 1600px;
-	background-color: var(--background-basic-color);
+	background-color: var(--background-basic-color);	
+	padding-bottom: 94px;
+	padding-top: 94px;
 }
 
-.customers-item {
-	
-	width: 170px;
-	height: 90px;
-	border: 1px solid #AFB1B8;
-	border-radius: 4px;
-}
 .customers-list {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 50px;
 }
 .customers-list>li:not(:first-child) {
 	margin-left: 30px;
 }
 .customers-item a {
-	width: inherit;
-	height: inherit;
+	width: 170px;
+	height: 90px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border: 1px solid; 
+	border-radius: 4px;
+	color: #AFB1B8;
 }
 .customers-icon {
-	fill: #AFB1B8;
+	fill: currentColor;
 }
 
 /*============== СТРАНИЦА ПОРТФОЛИО ===================== */
 
 /* КНОПКИ ФИЛЬТРА */
-
+.portfolio {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
 .filter {
 	
 	display: flex;
@@ -522,7 +537,7 @@ address {
 .photo-work p {
 	line-height: 1.87;
 	color: var(--font-description-item-color);
-	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
 .photo-work a {
 	width: inherit;
