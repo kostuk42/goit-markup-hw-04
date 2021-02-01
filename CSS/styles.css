@@ -105,7 +105,7 @@ body {
 header {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	padding: 25px 0;
 	font-weight: 500;
 	line-height: 1;
@@ -113,19 +113,28 @@ header {
 	color: var(--font-heading-color);
 
 }
+nav {
+	margin-left: 93px;
+}
+.contacts-header {
+	margin-left: 305px;
+}
 
 header ul {
 	display: flex;
 }
 
-header li:not(:first-child) {
+nav li:not(:first-child) {
     margin-left: 50px;
 }
 .contacts-header li{
 	display: flex;
 	align-items: center;
-	
 }
+.contacts-header li:last-child {
+	margin-left: 30px;
+}
+
 
 .contacts {
 	color: var(--font-description-item-color);
@@ -408,9 +417,13 @@ header a:focus {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	margin-top: 50px;
-	
+	/* margin-top: 50px; */
 }
+
+.team-list {
+	padding-top: 50px;
+}
+
 .team-list>li:not(:first-child) {
 	margin-left: 30px;
 }
@@ -437,7 +450,7 @@ header a:focus {
 
 /* =============== CUSTOMERS ================== */
 .customers {
-	background-color: var(--background-basic-color);	
+	background-color: var(--background-basic-color);	 
 	padding-bottom: 94px;
 	padding-top: 94px;
 }
